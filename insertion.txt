@@ -1,0 +1,21 @@
+test ===> playcode
+
+
+function insertion(tab) {
+  var len = tab.length;       
+  var tmp, i, j;                  
+  for(i = 1; i < len; i++) {
+    tmp = tab[i]
+    j = i - 1
+    while (j >= 0 && tab[j] > tmp) {
+      // déplacer le nombre
+      tab[j+1] = tab[j]
+      j--
+    }
+    tab[j+1] = tmp
+  }
+  return tab
+}
+var tab = [2, 8, 11, 6, 1,7, 9, 3];
+insertion(tab);
+console.log(tab);
